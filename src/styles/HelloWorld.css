@@ -1,0 +1,31 @@
+.typer-line-title {
+    height: 105px;
+    width: 4px;
+    background-color: #000000;
+    transform: translateY(10px);
+}
+
+.typer-line-large {
+    height: 45px;
+    width: 2px;
+    background-color: #000000;
+    transform: translateY(5px);
+}
+
+.animated {
+    animation: blinking 1s infinite;
+}
+
+@keyframes blinking {
+    0%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+.whitespace {
+    white-space: pre;
+}

@@ -1,0 +1,87 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* div classes */
+
+.full-screen {
+    min-height: 100%;
+}
+
+.extra-full-screen {
+    min-height: 110%;
+}
+
+.dark {
+    background-color: #242424;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.light {
+    background-color: #FFFFFF;
+    color: #242424
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+}
+
+.hbox {
+    display: flex;
+}
+
+/* text classes */
+
+.title {
+    font-size: 100px;
+}
+
+.large-text {
+    font-size: 40px;
+}
+
+.medium-text {
+    font-size: 30px;
+}
+
+.small-text {
+    font-size: 20px;
+}
+
+.no-margin {
+    margin-bottom: 0px;
+}
+
+/* cards */
+
+.invisible-card {
+    max-width: 400px;
+    margin: 50px;
+}
