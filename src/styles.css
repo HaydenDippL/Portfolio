@@ -79,9 +79,33 @@ html, body {
     margin-bottom: 0px;
 }
 
+.small-margin {
+    margin-bottom: 10px;
+}
+
+.medium-margin {
+    margin-bottom: 20px;
+}
+
+.large-margin {
+    margin-bottom: 40px;
+}
+
+.mega-margin {
+    margin-bottom: 150px
+}
+
 /* cards */
 
 .invisible-card {
     max-width: 400px;
-    margin: 50px;
+    margin: 20px;
+}
+
+/* images */
+
+.desktop-screenshot {
+    height: 500px;
+    width: auto;
+    margin-left: 50px;
 }
