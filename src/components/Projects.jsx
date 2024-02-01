@@ -1,7 +1,7 @@
 import BakkeScheduleLedger from '../assets/BakkeScheduleLedger.png'
 import WebsiteConcept from '../assets/WebsiteConcept.jpg'
 import MobileAppConcept from '../assets/MobileAppConcept.jpg'
-import WebScreenShot from '../assets/WebScreenShot.png'
+import WebScreenShot from '../assets/WebScreenshot.png'
 
 import GitHubLink from './GitHubLink'
 
