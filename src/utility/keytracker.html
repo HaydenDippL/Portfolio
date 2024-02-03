@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keystroke Tracker</title>
+</head>
+<body>
+
+<script>
+let keystrokes = [];
+let lastKeystrokeTime = null;
+
+// Function to calculate time difference in milliseconds
+function timeDiff(startTime, endTime) {
+  return endTime - startTime;
+}
+
+// Function to handle keystroke event
+function handleKeystroke(event) {
+  if ('Shift' === event.key && lastKeystrokeTime !== null) return
+  const currentTime = performance.now();
+  if (lastKeystrokeTime !== null) {
+    const timeElapsed = timeDiff(lastKeystrokeTime, currentTime);
+    keystrokes.push({ key: event.key, time: timeElapsed });
+  }
+  lastKeystrokeTime = currentTime;
+}
+
+// Add event listener for keydown event
+document.addEventListener('keydown', handleKeystroke);
+
+// Function to display keystrokes and time intervals after 10 seconds
+setTimeout(function() {
+  console.log("Keystrokes:");
+  let str = '[\n'
+  keystrokes.forEach((keystroke, index) => {
+    str += '    [' + keystroke.time + ', \'' + keystroke.key + '\'],\n'
+    // console.log(`Keystroke ${index + 1}: Key '${keystroke.key}', Time since last keystroke: ${keystroke.time} ms`);
+  });
+  str += ']'
+  console.log(str)
+}, 10000); // 10 seconds
+</script>
+
+</body>
+</html>
