@@ -1,15 +1,17 @@
-.typer-line-title {
+.blinker-title {
     height: 105px;
     width: 4px;
-    background-color: #000000;
-    transform: translateY(10px);
+    transform: translateY(6px);
 }
 
-.typer-line-large {
+.blinker-large {
     height: 45px;
     width: 2px;
+    transform: translateY(2px);
+}
+
+.blinker {
     background-color: #000000;
-    transform: translateY(5px);
 }
 
 .animated {
