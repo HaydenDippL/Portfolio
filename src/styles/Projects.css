@@ -1,0 +1,21 @@
+.digital-oceans {
+    filter: drop-shadow(0px 0px 60px rgb(19, 169, 255));
+}
+
+.react {
+    animation: spin-animation 10s infinite linear;
+    filter: drop-shadow(0px 0px 40px rgb(49, 255, 245));
+}
+
+.dream-host {
+    filter: drop-shadow(0px 0px 40px rgb(105, 141, 227))
+}
+
+@keyframes spin-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
