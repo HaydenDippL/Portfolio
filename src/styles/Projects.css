@@ -27,3 +27,23 @@
         transform: rotate(360deg);
     }
 }
+
+.pre-header {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.header {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.big-header {
+    font-size: 60px;
+    font-weight: 1000;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 500;
+}
