@@ -8,7 +8,15 @@
 }
 
 .dream-host {
-    filter: drop-shadow(0px 0px 40px rgb(105, 141, 227))
+    filter: drop-shadow(0px 0px 40px rgb(105, 141, 227));
+}
+
+.android {
+    filter: drop-shadow(0px 0px 40px rgb(126, 242, 31))
+}
+
+.ios {
+    filter: drop-shadow(0px 0px 40px rgb(233, 233, 233))
 }
 
 @keyframes spin-animation {

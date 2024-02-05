@@ -2,7 +2,7 @@ import BakkeScheduleLedger from '../assets/BakkeScheduleLedger.png'
 import WebsiteConcept from '../assets/WebsiteConcept.jpg'
 import MobileAppConcept from '../assets/MobileAppConcept.jpg'
 import WebScreenShot from '../assets/WebScreenshot.png'
-import MobileScreenShot from '../assets/MobileScreenshot.png'
+import MobileWebScreenShot from '../assets/MobileWebScreenshot.png'
 
 import GitHubLink from './GitHubLink'
 
@@ -73,15 +73,8 @@ function Projects() {
                     width: '30vw'
                 }}>
                     <p className='small-text' style={{fontWeight: 200}}>How I Built</p>
-                    <a href='www.uwopenrecroster.com'><h2 className='large-text' style={{fontWeight: 700}}>UW Open Rec Roster</h2></a>
+                    <a href='https://www.uwopenrecroster.com'><h2 className='large-text' style={{fontWeight: 700}}>UW Open Rec Roster</h2></a>
                     <p className='small-text' styles={{fontWeight: 500}}>I created the website as a React app. I used DigitalOceans to host the front and backend. I got my domain name from DreamHost.</p>
-                    {/* <p className='large-margin'>The website is a vite react app hosted on DigitalOceans.com with a domain name from DreamHost.com. The website interacts with a backend to get the dialy schedules from the recwell API. These schedules are memoized serverside daily, as to not overwhelm the recwell API. Additionally, the backend logs requests to track our backend calls. The DB was managed by my friend Bailey Kau.</p>
-                    <h2 className='medium-text small-margin'>What did I learn while making the website?</h2>
-                    <ul>
-                        <li><b>CSS Psuedo-Elements</b>: I was having serious issues with my styling and lag. Resizing the window would destroy the positioning of the hour mark lines and times themselves. I did some searching and found psuedo-elements `::before` and `::after`.</li>
-                        <li><b>CSS Animations</b>: I wanted to add a skeleton loading animation to my website to show that the data was loading. I was able to learn about animation past the transition attribute.</li>
-                        <li><b>Deploying a Web-App and Backend</b>: This project was really the first time I needed to deploy a project. I learned how to deploy not just on the macro-scale with pre-built deployers, but using NGINX. For the backend I had a blank vm, and had to configure it. I also learned how to use domain names in this project, giving both my frontend and backend unique domain names.</li>
-                    </ul> */}
                 </div>
                 <div className='vbox' style={{
                     marginRight: '1vw'
@@ -97,11 +90,33 @@ function Projects() {
                 }}/>
             </div>
             <div className='hbox mega-margin'>
-                <img src={MobileScreenShot} style={{
-                    height: '70vh',
-                    width: 'auto',
-                    borderRadius: '20px'
-                }}/>
+                <div className='hbox' style={{
+                    alignItems: 'center'
+                }}>
+                    <div className='vbox' style={{
+                        marginRight: '2vw'
+                    }}>
+                        <img className='android' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freebiesupply.com%2Flogos%2Flarge%2F2x%2Fandroid-logo-png-transparent.png&f=1&nofb=1&ipt=d4bb88cb5edd1abafe91a76247865a6adec2f64c893f46b63b5fcea9e5873a2d&ipo=images' height='180'/>
+                        <img className='ios' src='https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Flofrev.net%2Fwp-content%2Fphotos%2F2016%2F05%2Frainbow-apple-logo.png&f=1&nofb=1&ipt=c42589023ade19f27d32af95a76eb8d965e225c53f38bd0be3b03954aa50695d&ipo=images' height='180'/>
+                    </div>
+                    <img src={MobileWebScreenShot} style={{
+                        height: '70vh',
+                        width: 'auto',
+                        borderRadius: '20px'
+                    }}/>
+                </div>
+                <div className='left' style={{marginLeft: '2vw'}}>
+                    <div className='left' style={{
+                        maxWidth: '35vw'
+                    }}>
+                        <h2 className='subtitle' styles={{fontWeight: 1000}}>Mobile Friendly!</h2>
+                    </div>
+                        <div className='left' style={{
+                            maxWidth: '35vw',
+                        }}>
+                        <p className='small-text' style={{fontWeight: 500}}>UW Open Rec Roster is able to be viewed on both Android and iOS devices as well as Google Pixels. It uses conditional rendering for mobile devices, and also iOS devices, to create a smoother experience for the user.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </>
