@@ -28,6 +28,8 @@
     }
 }
 
+/* text */
+
 .pre-header {
     font-size: 20px;
     font-weight: 200;
@@ -46,4 +48,19 @@
 .text {
     font-size: 20px;
     font-weight: 500;
+}
+
+.close-text {
+    margin-top: -40px;
+}
+
+.fat {
+    font-family: 'Roboto Black', Arial, sans-serif;
+    font-size: 50px;;
+    font-weight: 900;
+}
+
+.skinny {
+    font-size: 50px;
+    font-weight: 200;
 }
