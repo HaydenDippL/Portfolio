@@ -1,4 +1,5 @@
 import BadgerBasketball from './projects/BadgerBasketball'
+import EvSelect from './projects/EvSelect'
 
 import '../styles.css'
 
@@ -9,6 +10,9 @@ function Projects() {
             <p className='large-text'>A quick overview of my work</p>
         </div>
         <BadgerBasketball/>
+        <div className='spacer waves1'/>
+        <EvSelect/>
+        <div className='spacer waves2'/>
     </>
 }
 
