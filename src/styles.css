@@ -36,6 +36,10 @@ html, body {
     color: #242424
 }
 
+.light-text {
+    color: rgba(255, 255, 255, 0.87);
+}
+
 .centered {
     display: flex;
     flex-direction: column;
@@ -127,4 +131,20 @@ html, body {
     height: 500px;
     width: auto;
     margin-left: 50px;
+}
+
+.spacer {
+    aspect-ratio: 960/360;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.waves1 {
+    background-image: url('./assets/layered-waves-blue-red.svg');
+}
+
+.waves2 {
+    background-image: url('./assets/layered-waves-red-blue.svg');
 }

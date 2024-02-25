@@ -1,6 +1,6 @@
 function GitHubLink(props) {
 
-    return <a href={props.link} style={{margin: '10px'}}>
+    return <a href={props.link} target='_blank' style={{margin: '10px'}}>
         <div className='github-box' style={{
             height: props.size,
             width: props.size,

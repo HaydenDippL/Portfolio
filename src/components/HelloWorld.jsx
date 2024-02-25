@@ -64,7 +64,7 @@ function HelloWorld() {
     let blinker_upper = index <= split ? 'blinker' : ''
     let blinker_lower = index > split ? 'blinker' : ''
 
-    return <div className='full-screen light center-horiz' style={{marginTop: '30vh'}}>
+    return <div className='light center-horiz' style={{marginTop: '30vh', height: '70vh'}}>
         <div className='hbox'>
             <h1 className='title whitespace'>{get_message(0, Math.min(index, split))}</h1>
             {blinker_upper && <div className={`blinker blinker-title ${animated}`}/>}
