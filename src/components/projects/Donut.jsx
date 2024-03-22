@@ -48,7 +48,6 @@ function Donut() {
                 if (roll > _2PI) roll -= _2PI
                 set_angles({yaw: yaw, pitch: pitch, roll: roll})
             }
-                    
         }
 
         function desired_angles(relative_pos) {
@@ -59,29 +58,6 @@ function Donut() {
                 yaw: max_yaw * relative_pos.y,
                 pitch: -max_pitch * relative_pos.x
             }
-        }
-
-        // Define initial state (yaw_speed, pitch_speed)
-        const initialState = { yawSpeed: 0.5, pitchSpeed: 0.3 };
-
-        // Define final state (yaw, pitch)
-        const finalState = { yaw: 45, pitch: 30 };
-
-        // Determine control points based on initial and final states
-        const controlPoint1 = { yawSpeed: 0.5, pitchSpeed: 0.3 }; // Initial state
-        const controlPoint2 = { yawSpeed: 0.1, pitchSpeed: 0.1 }; // Intermediate control point
-        const controlPoint3 = { yawSpeed: 0, pitchSpeed: 0 }; // Final state
-
-        // Calculate Bezier curve
-        function calculateBezier(t) {
-            const yawSpeed = bezier(t, initialState.yawSpeed, controlPoint1.yawSpeed, controlPoint2.yawSpeed, controlPoint3.yawSpeed, finalState.yaw);
-            const pitchSpeed = bezier(t, initialState.pitchSpeed, controlPoint1.pitchSpeed, controlPoint2.pitchSpeed, controlPoint3.pitchSpeed, finalState.pitch);
-            return { yawSpeed, pitchSpeed };
-        }
-
-        // Bezier interpolation function
-        function bezier(t, p0, p1, p2, p3, p4) {
-            return (1 - t) * (1 - t) * (1 - t) * (1 - t) * p0 + 4 * (1 - t) * (1 - t) * (1 - t) * t * p1 + 6 * (1 - t) * (1 - t) * t * t * p2 + 4 * (1 - t) * t * t * t * p3 + t * t * t * t * p4;
         }
 
         animate_donut()
@@ -96,39 +72,40 @@ function Donut() {
         })
     }
 
-    return <div className='centered light-text' style={{backgroundColor: '#c21b8f'}}>
+    return <div className='centered light-text' style={{backgroundColor: '#001220'}}>
         <div className='hbox'>
             <h1 className='title'>Spinning Donut</h1>
             <div style={{marginLeft: '3vw'}}>
                 <GitHubLink link={DONUT_GIT_REPO_URL} size={90}/>
             </div>
         </div>
-        <div>
-            <p className='text'>I decided to try my hand at the infamous spinning ascii donut animation. I was proud to create this animation with almost no outside influence, no tutorials, just math (see <a href={DONUT_GIT_REPO_URL} target='_blank'>github</a> for extensive documentation).</p>
-            <p className='text'>I made this code in C++ and ported it to JS for this website.</p>
-            <ul>
-                <li>Computer Graphics and Rendering</li>
-                <li>Bezier Curves</li>
-                <li>Numerical Stability</li>
-                <li>Animation</li>
-            </ul>
-            <img src={DonutCode} style={{
-                height: '50vh',
-                width: 'auto',
-                margin: '20px',
-                borderRadius: '20px'
-            }}/>
-            <img src={SpinningDonut} style={{
-                height: '50vh',
-                width: 'auto',
-                margin: '20px',
-                borderRadius: '20px'
-            }}/>
-            <div id='donut-terminal'
-                onMouseOver={() => set_is_mouse_over(true)}
-                onMouseLeave={() => set_is_mouse_over(false)}
-                onMouseMove={handle_mouse_move}>
-                {donut.split('\n').map((line, i) => <p key={i}>{line}</p>)}
+        <div className='centered'>
+            <div className='vbox'>
+                <div className='hbox'>
+                    <img src={DonutCode} style={{
+                        height: '38vh',
+                        width: 'auto',
+                        margin: '20px',
+                        borderRadius: '20px'
+                    }}/>
+                    <div className='left' style={{width: '40vw'}}>
+                        <p className='text'>I decided to try my hand at the infamous spinning ascii donut animation. I was proud to create this animation with almost no outside influence, no tutorials, just math (see <a href={DONUT_GIT_REPO_URL} target='_blank'>github</a> for extensive documentation).</p>
+                        <p className='text'>I made this code in C++ and rewrote it to JS for this website. While creating this project I learned about...</p>
+                        <ul className='text'>
+                            <li>Computer Graphics and Rendering</li>
+                            <li>Numerical Stability</li>
+                            <li>Animation</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style={{marginBottom: '-20px'}}>Hover Me!</p>
+                <div id='donut-terminal'
+                    onMouseOver={() => set_is_mouse_over(true)}
+                    onMouseLeave={() => set_is_mouse_over(false)}
+                    onMouseMove={handle_mouse_move}
+                    style={{marginBottom: '30vh'}}>
+                    {donut.split('\n').map((line, i) => <p key={i}>{line}</p>)}
+                </div>
             </div>
         </div>
     </div>
