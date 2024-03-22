@@ -1,4 +1,5 @@
 import BadgerBasketball from './projects/BadgerBasketball'
+import Donut from './projects/Donut'
 import EvSelect from './projects/EvSelect'
 
 import '../styles.css'
@@ -13,6 +14,7 @@ function Projects() {
         <div className='spacer waves1'/>
         <EvSelect/>
         <div className='spacer waves2'/>
+        <Donut/>
     </>
 }
 

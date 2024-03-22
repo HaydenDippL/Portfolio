@@ -56,11 +56,33 @@
 
 .fat {
     font-family: 'Roboto Black', Arial, sans-serif;
-    font-size: 50px;;
+    font-size: 50px;
     font-weight: 900;
 }
 
 .skinny {
     font-size: 50px;
     font-weight: 200;
+}
+
+#donut-terminal {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #1b2421;
+    margin-left: 10vw;
+    margin: 0px 10vw 0px;
+    color: #b8edd9;
+    font-size: 12px;
+    font-family: "Space Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+    white-space: pre;
+}
+
+#donut-terminal p {
+    margin: 0px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard syntax */
 }
