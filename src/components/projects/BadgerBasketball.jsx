@@ -52,6 +52,7 @@ function BadgerBasketball() {
             <GitHubLink link={BADGER_BASKETBALL_GIT_REPO_URL} size={70}/>
             <Link link={UW_OPEN_REC_ROSTER_URL} size={70}/>
         </div>
+        <p style={{fontSize: '12px'}}>*Links to git repo and website</p>
         <div className='hbox' style={{marginTop: '10vh'}}>
             <div className='left' style={{width: '40vw'}}>
                 <h2 className='pre-header'>THE PROBLEM</h2>
@@ -203,7 +204,7 @@ function daily_visits_line_plot(data) {
         .attr("transform", `translate(0,${height})`)
         .style("font-size", "14px")
         .call(d3.axisBottom(x)
-            .tickValues(x.ticks(d3.timeDay.every(1))) // Display ticks every 6 months
+            .tickValues(x.ticks(d3.timeDay.every(5))) // Display ticks every 5
             .tickFormat(d3.timeFormat("%b %d"))) // Format the tick labels to show Month and Year
         .call(g => g.select(".domain").remove()) // Remove the x-axis line
         .selectAll(".tick line") // Select all tick lines
