@@ -97,11 +97,11 @@ function BadgerBasketball() {
             }}/>
         </div>
         <div className='hbox mega-margin'>
-            <div className='left' style={{width: '30vw', marginBottom: '-90px'}}>
+            <div className='left' style={{width: '30vw', marginBottom: '-50px'}}>
                 <p className='pre-header'>How I Built</p>
                 <a href={UW_OPEN_REC_ROSTER_URL} style={{marginBottom: '5vh'}}><h2 className='header'>UW Open Rec Roster</h2></a>
                 <p className='text'>I created the website as a React app, hosted on DigitalOceans with a domain name from DreamHost. It is able to display all 8 court schedules for each of the gyms at UW-Madison: Bakke and Nick.</p>
-                <p className='text'>The backend, built with <strong>express.js</strong>, uses server-size memoization to more efficiently handle requests, and uses logging to track user activity on the site.</p>
+                <p className='text'>The backend, built with <strong>express.js</strong>, uses server-size memoization to more efficiently handle requests, and uses logging to track user activity on the site on a <strong>TiDB server</strong>.</p>
             </div>
             <div className='vbox' style={{marginRight: '1vw'}}>
                 <img className='digital-oceans' src={DIGITAL_OCEANS_LOGO_URL} height='100' width='100'/>
